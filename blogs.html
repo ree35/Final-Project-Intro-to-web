@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <title>AskRob?</title>
+    <style type="text/css">
+        .header-basic {
+            background-color: dimgrey;
+            box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
+            padding: 10px 40px;
+            height: 100px;
+            box-sizing: border-box;
+        }
+        
+        .header-basic .header-limiter {
+            max-width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .header-basic .header-limiter h1 {
+            float: left;
+            font-family: "Amarillo";
+            src: url ('Amarillo.otf');
+            line-height: 50px;
+            margin: 0;
+        }
+        
+        .header-basic .header-limiter h1 span {
+            color: skyblue;
+        }
+        
+        .header-basic .header-limiter a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .header-basic .header-limiter nav {
+            font: 16px Arial, Helvetica, sans-serif;
+            line-height: 80px;
+            float: right;
+        }
+        
+        .header-basic .header-limiter nav a {
+            display: inline-block;
+            padding: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            opacity: 1;
+        }
+        
+        .header-basic .header-limiter nav a:hover {
+            opacity: 1;
+        }
+        
+        .header-basic .header-limiter nav a.selected {
+            color: skyblue;
+            pointer-events: none;
+            opacity: 1;
+        }
+        
+        @media all and (max-width: 600px) {
+            .header-basic {
+                padding: 20px 0;
+                height: 60px;
+            }
+            .header-basic .header-limiter h1 {
+                float: none;
+                margin: -8px 0 10px;
+                text-align: center;
+                font-size: 24px;
+                line-height: 1;
+            }
+            .header-basic .header-limiter nav {
+                line-height: 1;
+                float: none;
+            }
+            .header-basic .header-limiter nav a {
+                font-size: 15px;
+            }
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            background-color: white;
+        }
+        
+        body {
+            font: 14px/1.5 Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu {
+            text-align: center;
+            padding-bottom: 40px;
+            margin-bottom: 200px;
+        }
+        
+        .menu img {
+            opacity: 0.7;
+            padding: center;
+            display:inline-block;
+            padding-bottom: 0%;
+        }
+        
+        .menu h1 {
+            margin-top: 0;
+            color: deepskyblue;
+            padding-bottom: 306px;
+        }
+        
+        .menu h2 {
+            color: deeppink;
+        }
+        
+        .menu h2 a {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block;
+            border: 1px solid pink;
+            padding: 10px 15px;
+            border-radius: 3px;
+            font: bold 14px/1 'Open Sans', sans-serif;
+            text-transform: uppercase;
+        }
+        
+        .menu h2 a:hover {
+            background-color: pink;
+            transition: 0.2s;
+            color: skyblue;
+        }
+        
+        .menu ul {
+            max-width: 600px;
+            margin: -230px auto 0;
+        }
+        
+        .menu ul a {
+            text-decoration: none;
+            color: white;
+            text-align: left;
+            background-color: orange;
+            padding: 10px 16px;
+            border-radius: 2px;
+            opacity: 2;
+            font-size: 26px;
+            display: inline-block;
+            margin: 6px;
+            line-height: 1;
+            outline: none;
+            transition: 0.2s ease;
+        }
+        
+        .menu ul li a.active {
+            background-color: lawngreen;
+            pointer-events: none;
+        }
+        
+        .menu ul li a:hover {
+            opacity: 1;
+        }
+        
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .menu ul li {
+            display: inline-block;
+        }
+        
+        @media (max-height:1000px) {
+            .menu {
+                padding-top: 80px;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            #bsaHolder {
+                display: none;
+            }
+        }
+        
+        .tz-link {
+            text-decoration: none;
+            color: white!important;
+            font: bold 36px Arial, Helvetica, sans-serif !important;
+        }
+        
+        .tz-link span {
+            color: red;
+
+        }
+        .header-mid-page{
+            color:deepskyblue;
+            font-family: "Amarillo";
+            src: url('Amarillo.otf');
+             
+        }
+           div.container {
+    width: 100%;
+    border: 1px solid white;
+    }
+    
+div.blogs {
+    background-color: whitesmoke;
+    color: cadetblue;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+    }
+        h1{
+           text-align: center ;
+           font-family: "Amarillo";
+            src: url ('Amarillo.otf');
+            padding-bottom: 2%;
+            padding-top: 2%;
+            color: cadetblue
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-basic">
+        <div class="header-limiter">
+            <h1><a href="index.html">AskRob?<span></span></a></h1>
+            <nav> <a href="charts.html">Charts</a> <a href="knicks.html">Knicks</a> <a href="teamsstats.html">Stats</a> <a href="fantasy.html">Fantasy</a> <a href="blogs.html">Blogs</a> </nav>
+        </div>
+    </header>
+ <h1>Top Blogs Of The week</h1>
+
+<body>
+<div class="blogs">
+<h2>Porzingis</h2>
+    <p>
+Phil Jackson most prominent move as Knicks president was on full and inconceivable show at the Staples Center, paraded before the group that left him behind in the draft under two years prior. Kristaps Porzingis completed with a diversion high 26 focuses, 12 bounce back and seven pieces, ending his shooting droop unequivocally in New York's 118-112 triumph Sunday over L.A.</p>
+    <p>
+    Written by: Frank Freihart</p>
+</div>
+
+<div class="blogs">
+<h2>Celtics</h2>
+<p>The Celtics have turned into a stay-in-your-own-yard group. They have been pummeling on the sub-.500 adversaries, however another difficult late-amusement blur has abandoned them only 2-6 against those from the NBA's higher lease locale.</p>
+    <p>  Written by: Frank Freihart </p>
+</div>
+
+<div class="blogs">
+<h3>Lakers</h3>
+<p>
+    As the Lakers were reminded in their 134-95 misfortune to the Houston Rockets on Wednesday at Toyota Center, apparently none of the mixes they have attempted since the huge number of wounds has sufficiently tended to the group's reduced backcourt circumstance or its moderate begins. On Wednesday, Walton began sometimes utilized protect Marcelo Huertas at point monitor and embedded save Jordan Clarkson into the beginning shooting watch spot he expected for the majority of the 2015-2016 season.</p>
+    <p>  Written by: Frank Freihart </p>
+    </div>
+    <div class="blogs">
+<h3>Derrick Rose</h3>
+<p>
+    Derrick Rose missed the Knicks' diversion against Cleveland Wednesday night at the Garden due to bring down back torment, the primary amusement he's missed since joining the group.</p>
+    <p>  Written by: Frank Freihart </p>
+    </div>
+
+
+</body>
+</html>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

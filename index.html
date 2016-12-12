@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <title>AskRob?</title>
+    <style type="text/css">
+        .header-basic {
+            background-color: dimgrey;
+            box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
+            padding: 10px 40px;
+            height: 100px;
+            box-sizing: border-box;
+        }
+        
+        .header-basic .header-limiter {
+            max-width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .header-basic .header-limiter h1 {
+            float: left;
+            font-family: "Amarillo";
+            src: url ('Amarillo.otf');
+            line-height: 80px;
+            margin: 0;
+        }
+        
+        .header-basic .header-limiter h1 span {
+            color: skyblue;
+        }
+        
+        .header-basic .header-limiter a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .header-basic .header-limiter nav {
+            font: 16px Arial, Helvetica, sans-serif;
+            line-height: 70px;
+            float: right;
+        }
+        
+        .header-basic .header-limiter nav a {
+            display: inline-block;
+            padding: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            opacity: 1;
+        }
+        
+        .header-basic .header-limiter nav a:hover {
+            opacity: 1;
+        }
+        
+        .header-basic .header-limiter nav a.selected {
+            color: skyblue;
+            pointer-events: none;
+            opacity: 1;
+        }
+        
+        @media all and (max-width: 600px) {
+            .header-basic {
+                padding: 15px 0;
+                height: 75px;
+            }
+            .header-basic .header-limiter h1 {
+                float: none;
+                margin: -8px 0 10px;
+                text-align: center;
+                font-size: 24px;
+                line-height: 1;
+            }
+            .header-basic .header-limiter nav {
+                line-height: 1;
+                float: none;
+            }
+            .header-basic .header-limiter nav a {
+                font-size: 13px;
+            }
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            background-color: white;
+        }
+        
+        body {
+            font: 14px/1.5 Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu {
+            text-align: center;
+            padding-bottom: 40px;
+            margin-bottom: 200px;
+        }
+        
+        .menu img {
+            opacity: 0.6;
+            padding: center;
+            display:inline-block;
+            padding-bottom: 0%;
+        }
+        
+        .menu h1 {
+            margin-top: 0;
+            color: deepskyblue;
+            padding-bottom: 306px;
+        }
+        
+        .menu h2 {
+            color: deeppink;
+        }
+        
+        .menu h2 a {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block;
+            border: 1px solid pink;
+            padding: 10px 15px;
+            border-radius: 3px;
+            font: bold 14px/1 'Open Sans', sans-serif;
+            text-transform: uppercase;
+        }
+        
+        .menu h2 a:hover {
+            background-color: pink;
+            transition: 0.2s;
+            color: skyblue;
+        }
+        
+        .menu ul {
+            max-width: 600px;
+            margin: -230px auto 0;
+        }
+        
+        .menu ul a {
+            text-decoration: none;
+            color: white;
+            text-align: left;
+            background-color: orange;
+            padding: 10px 16px;
+            border-radius: 2px;
+            opacity: 2;
+            font-size: 26px;
+            display: inline-block;
+            margin: 6px;
+            line-height: 1;
+            outline: none;
+            transition: 0.2s ease;
+        }
+        
+        .menu ul li a.active {
+            background-color: lawngreen;
+            pointer-events: none;
+        }
+        
+        .menu ul li a:hover {
+            opacity: 1;
+        }
+        
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .menu ul li {
+            display: inline-block;
+        }
+        
+        @media (max-height:1000px) {
+            .menu {
+                padding-top: 80px;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            #bsaHolder {
+                display: none;
+            }
+        }
+        
+        .tz-link {
+            text-decoration: none;
+            color: white!important;
+            font: bold 36px Arial, Helvetica, sans-serif !important;
+        }
+        
+        .tz-link span {
+            color: red;
+        }
+        
+        .header-boot {
+            text-align: center;
+            font-family: "Amarillo";
+            src: url ('Amarillo.otf');
+            font-size: 400%;
+            color: deepskyblue;
+            padding-top: -70%;
+        }
+        
+        .boot {
+            padding-top: 5%;
+        
+        }
+        .header-mid-page{
+            color:deepskyblue;
+            font-family: "Amarillo";
+            src: url('Amarillo.otf');
+             
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-basic">
+        <div class="header-limiter">
+            <h1><a href="index.html">AskRob?<span></span></a></h1>
+            <nav> <a href="charts.html">Charts</a> <a href="knicks.html">Knicks</a> <a href="teamsstats.html">Stats</a> <a href="fantasy.html">Fantasy</a> <a href="blogs.html">Blogs</a> </nav>
+        </div>
+    </header>
+    <div class="menu"> 
+        <div class="row">
+            <div class="col-sm-12">
+                <img class="img-responsive" src="nbalogo.png">
+            </div>
+        </div>
+        <div class= "header-mid-page">
+        <h1>Ask For Stats</h1>
+        </div>
+        <ul>
+            <li><a href="index.html" class="active">League Hints</a></li>
+            <li><a href="">Rob's Favorites</a></li>
+            <li><a href="contact.html">Contact Rob</a></li>
+        </ul>
+    </div>
+</body>
+<header>
+    <div>
+        <div class="header-boot">
+            <div class="row">
+                <header-boot>League Scorers</header-boot>
+            </div>
+            <div class="boot">
+                <div class="col-sm-12 col-lg-3"><img class="img-responsive" img src="russ.jpg" title="Russell"></div>
+                <div class="col-sm-12 col-lg-3"><img class="img-responsive" img src="harden.jpg" title= "James Harden"></div>
+                <div class="col-sm-12 col-lg-3"><img class="img-responsive" img src="AD.jpg" title= "Anthony Davis"></div>
+                <div class="col-sm-12 col-lg-3"><img class="img-responsive" img src="GA.jpg" title= "Giannis Antetokoumpo"></div>
+                <div class="clearfix visible-md-block"></div>
+                <div class="col-sm-13 col-lg-3"><img class="img-responsive" img src="kemba.jpg" title= "Kemba Walker"></div>
+                <div class="col-sm-13 col-lg-3"><img class="img-responsive" img src="KAT.jpg" title= "Karl Anthony Towns"></div>
+                <div class="col-sm-13 col-lg-3"><img class="img-responsive" img src="lillard.jpg" title= "Damian Lillard"></div>
+                <div class="col-sm-13 col-lg-3"><img class="img-responsive" img src="gordon.jpg" title= "Gordon Hayward"></div>
+                <div class="clearfix visible-md-block"></div>
+                <div class="col-sm-14 col-lg-3"><img class="img-responsive" img src="drummond.jpg" title= "Andre Drummond"></div>
+                <div class="col-sm-14 col-lg-3"><img class="img-responsive" img src="cp3.jpg" title= "Chris Paul"></div>
+                <div class="col-sm-14 col-lg-3"><img class="img-responsive" img src="jordan.jpg" title= "DeAndre Jordan"></div>
+                <div class="col-sm-14 col-lg-3"><img class="img-responsive" img src="curry.jpg" title = "Steph "></div>
+            </div>
+        </div>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</html>
